@@ -16,7 +16,7 @@ function fibonacci(size: number) {
 }
 console.log(fibonacci(8));
 let sum: number=0;
-for (let i=0;i<fibonacci(8);i++){
-    
+for (let num of arr){
+    sum+=num;
 }
 console.log(sum)
