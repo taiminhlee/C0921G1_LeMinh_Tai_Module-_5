@@ -1,4 +1,4 @@
-<!--<app-header></app-header>-->
+
 <table class="table">
   <thead>
   <tr>
@@ -7,21 +7,20 @@
     <th>Date end</th>
     <th>Deposit</th>
     <th>Total money</th>
+    <th>Customer information</th>
+    <th>Service information</th>
   </tr>
 
   </thead>
   <tbody>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  <tr *ngFor="let contract of contractList">
+    <td>{{contract.id}}</td>
+    <td>{{contract.dateStart}}</td>
+    <td>{{contract.dateEnd}}</td>
+    <td>{{contract.deposit}}</td>
+    <td>{{contract.totalMoney}}</td>
+    <td>{{contract.customer.id}},{{contract.customer.name}}</td>
+    <td>{{contract.facility.id}},{{contract.facility.name}}</td>
   </tr>
   </tbody>
 </table>
-
-<!--<app-footer></app-footer>-->

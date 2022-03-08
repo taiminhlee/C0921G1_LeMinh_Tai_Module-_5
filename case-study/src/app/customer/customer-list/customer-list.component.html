@@ -2,6 +2,7 @@
 <table class="table">
   <thead>
   <tr>
+    <th>Id</th>
     <th>Name</th>
     <th>Birthday</th>
     <th>Id Card</th>
@@ -15,15 +16,22 @@
 
   </thead>
   <tbody>
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  <tr *ngFor="let customer of customerList">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.birthday}}</td>
+    <td>{{customer.idCard}}</td>
+    <td>
+      <span *ngIf="customer.gender==1; else elseBlook">Male</span>
+      <ng-template #elseBlook>Female</ng-template>
+    </td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.customerType.name}}</td>
+    <td>{{customer.address}}</td>
+
+
+
     <td>
 
     </td>

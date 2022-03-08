@@ -3,19 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { TodoComponent } from './todo/todo.component';
-
 @NgModule({
   declarations: [
-    AppComponent,
-    TodoComponent,
-
+    AppComponent
   ],
   imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

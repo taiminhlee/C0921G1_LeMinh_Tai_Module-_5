@@ -5,9 +5,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ServiceListComponent } from './service/service-list/service-list.component';
-import { ServiceEditComponent } from './service/service-edit/service-edit.component';
-import { ServiceCreateComponent } from './service/service-create/service-create.component';
+import { FacilityListComponent } from './facility/facility-list/facility-list.component';
+import { FacilityEditComponent } from './facility/facility-edit/facility-edit.component';
+import { FacilityCreateComponent } from './facility/facility-create/facility-create.component';
 import { CustomerListComponent } from './customer/customer-list/customer-list.component';
 import { CustomerEditComponent } from './customer/customer-edit/customer-edit.component';
 import { CustomerCreateComponent } from './customer/customer-create/customer-create.component';
@@ -18,15 +18,16 @@ import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.co
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import { HomeComponent } from './home/home.component';
+import {EmployeeListComponent} from "./employee/employee-list/employee-list.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    ServiceListComponent,
-    ServiceEditComponent,
-    ServiceCreateComponent,
+    FacilityListComponent,
+    FacilityEditComponent,
+    FacilityCreateComponent,
     CustomerListComponent,
     CustomerEditComponent,
     CustomerCreateComponent,
@@ -34,6 +35,7 @@ import { HomeComponent } from './home/home.component';
     ContractListComponent,
     EmployeeCreateComponent,
     EmployeeEditComponent,
+    EmployeeListComponent,
     HomeComponent
   ],
   imports: [
