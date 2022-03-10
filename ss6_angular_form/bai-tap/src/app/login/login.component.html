@@ -1,0 +1,31 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="text" name="email" formControlName="email">
+    <div class="text-danger" *ngIf="contactForm.get('email').hasError('required') &&
+      contactForm.get('email').dirty">
+      Please input !!
+    </div>
+    <div class="text-danger" *ngIf="contactForm.get('email').hasError('email') &&
+      contactForm.get('email').dirty">
+      Wrong format !!
+    </div>
+  </div>
+  <div class="mb-3" >
+    <label class="form-label">Password</label>
+    <input type="password" name="password" formControlName="password">
+    <div class="text-danger" *ngIf="contactForm.get('password').hasError('required') &&
+      contactForm.get('password').dirty">
+      Please input !!!
+    </div>
+    <div class="text-danger" *ngIf="contactForm.get('password').hasError('minlength') &&
+      contactForm.get('password').dirty">
+      wrong format !!!
+    </div>
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

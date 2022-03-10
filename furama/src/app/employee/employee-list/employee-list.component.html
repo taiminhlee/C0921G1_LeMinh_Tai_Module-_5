@@ -1,0 +1,35 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Id Card</th>
+    <th>Position</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Division</th>
+    <th>Education Degree</th>
+    <th>Salary</th>
+    <th>Action</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employeeList">
+    <td>{{employee.name}}</td>
+    <td>{{employee.birthday}}</td>
+    <td>{{employee.idCard}}</td>
+    <td>{{employee.position.name}}</td>
+    <td>{{employee.phone}}</td>
+    <td>{{employee.email}}</td>
+    <td>{{employee.division.name}}</td>
+    <td>{{employee.educationDegree.name}}</td>
+    <td>{{employee.salary}}</td>
+    <td>delete edit</td>
+  </tr>
+  </tbody>
+</table>
+
+<!--modal delete-->
+
+

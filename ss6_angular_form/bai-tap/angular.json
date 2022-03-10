@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bai-tap"
+    }
+  },
+  "defaultProject": "bai-tap",
+  "cli": {
+    "analytics": "68bab15e-5be8-4235-90c3-1dcac2b4551a"
+  }
 }

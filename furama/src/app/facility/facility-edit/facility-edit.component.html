@@ -1,0 +1,68 @@
+<div class="body">
+  <div class="center justify-content-center">
+    <h1>Our Newsletter</h1>
+    <form [formGroup]="facilityCreateForm">
+      <div class="inputbox">
+        <input type="text"  formControlName="id">
+        <span>Id</span>
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('id').hasError('required') &&
+            facilityCreateForm.get('id').dirty">
+        Please input !!
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('id').hasError('pattern') &&
+            facilityCreateForm.get('id').dirty">
+        Wrong format !!
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="name">
+        <span>name</span>
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('name').hasError('required') &&
+            facilityCreateForm.get('name').dirty">
+        Input please !!
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="cost">
+        <span>Cost</span>
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('cost').hasError('required') &&
+            facilityCreateForm.get('cost').dirty">
+        Input please !!
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('cost').hasError('min') &&
+            facilityCreateForm.get('cost').dirty">
+        Not negative !!
+      </div>
+      <div class="inputbox">
+        <input type="text" formControlName="maxOfPeople">
+        <span>Max Of People</span>
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('maxOfPeople').hasError('required') &&
+            facilityCreateForm.get('maxOfPeople').dirty">
+        Input please !!
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('maxOfPeople').hasError('min') &&
+            facilityCreateForm.get('maxOfPeople').dirty">
+        Not negative !!
+      </div>
+
+      <span>Customer Type</span>
+      <div class="inputbox">
+
+        <select formControlName="rentType">
+          <option selected disabled>Choose please</option>
+          <option value="{{rentType.id}}" *ngFor="let rentType of rentTypes">{{rentType.name}}</option>
+        </select>
+      </div>
+      <div class="text-danger" *ngIf="facilityCreateForm.get('rentType').hasError('required') &&
+            facilityCreateForm.get('rentType').dirty">
+        Please input !!
+      </div>
+      <div class="inputbox">
+        <input type="button" value="submit">
+      </div>
+
+    </form>
+  </div>
+</div>

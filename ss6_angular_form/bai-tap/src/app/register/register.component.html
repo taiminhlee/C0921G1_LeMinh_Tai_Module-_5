@@ -1,0 +1,82 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="text" name="email" formControlName="email">
+    <div class="text-danger" *ngIf="contactForm.get('email').hasError('required') &&
+      contactForm.get('email').dirty">
+      Please input !!
+    </div>
+    <div class="text-danger" *ngIf="contactForm.get('email').hasError('email') &&
+      contactForm.get('email').dirty">
+      Wrong format !!
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Age</label>
+    <input type="date" name="age" formControlName="age">
+    <div class="text-danger" *ngIf="contactForm.get('age').hasError('required') &&
+      contactForm.get('age').dirty">
+      Please input !!
+    </div>
+    <div class="text-danger" *ngIf="contactForm.get('age').hasError('not18') &&
+      contactForm.get('age').dirty">
+      Not 18 !!
+    </div>
+  </div>
+  <div class="mb-3" formGroupName="passWordForm">
+    <label class="form-label">Password</label>
+    <input type="password" name="password" formControlName="password">
+    <div class="text-danger" *ngIf="contactForm.controls.passWordForm.get('password').hasError('required') &&
+      contactForm.controls.passWordForm.get('password').dirty">
+      Please input !!!
+    </div>
+    <div class="text-danger" *ngIf="contactForm.controls.passWordForm.get('password').hasError('minlength') &&
+      contactForm.controls.passWordForm.get('password').dirty">
+      wrong format !!!
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Confirm Password</label>
+      <input type="password" name="confirm" formControlName="confirmPassWord">
+      <div class="text-danger"
+           *ngIf="contactForm.get('passWordForm').hasError('passWordNotMatch') && contactForm.get('passWordForm').touched">
+        Not match !!!
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Phone</label>
+    <input type="text" name="phone" formControlName="phone">
+    <div class="text-danger" *ngIf="contactForm.get('phone').hasError('required') &&
+      contactForm.get('phone').dirty">
+      Please input !!!
+    </div>
+    <div class="text-danger" *ngIf="contactForm.get('phone').hasError('pattern') &&
+      contactForm.get('phone').dirty">
+      Wrong format !!!
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Gender: </label>
+    <input type="radio" value="male" formControlName="gender" required="required">Male
+    <input type="radio" value="female" formControlName="gender" required="required">Female
+    <div class="text-danger" *ngIf="contactForm.get('gender').hasError('required') &&
+      contactForm.get('gender').touched">
+      Please input !!!
+    </div>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Country</label>
+    <select formControlName="address">
+      <option ngValue="{{address}}" *ngFor="let address of addressList">{{address}}</option>
+    </select>
+    <div class="text-danger" *ngIf="contactForm.get('address').hasError('required') &&
+      contactForm.get('address').touched">
+      Please input !!!
+    </div>
+  </div>
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+

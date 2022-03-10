@@ -1,0 +1,40 @@
+<a [routerLink]="['/customer/create']">Create Customer</a>
+<table class="table">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Birthday</th>
+    <th>Id Card</th>
+    <th>Gender</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Customer Type</th>
+    <th>Address</th>
+    <th>Action</th>
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customerList">
+    <td>{{customer.id}}</td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.birthday}}</td>
+    <td>{{customer.idCard}}</td>
+    <td>
+      <span *ngIf="customer.gender==1; else elseBlook">Male</span>
+      <ng-template #elseBlook>Female</ng-template>
+    </td>
+    <td>{{customer.phone}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.customerType.name}}</td>
+    <td>{{customer.address}}</td>
+    <td>
+      <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+        <button routerLink="/customer/edit/{{customer.id}}" type="button" class="btn btn-danger">Edit</button>
+        <button (click)="openDialog(customer.id)" type="button" class="btn btn-warning">Delete</button>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

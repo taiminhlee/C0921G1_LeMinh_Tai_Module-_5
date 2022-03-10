@@ -1,0 +1,60 @@
+<div class="body">
+  <div class="center justify-content-center">
+    <h1>Create Contract</h1>
+    <form [formGroup]="contractForm" (ngSubmit)="onSubmit()">
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="id">
+        <span>Id</span>
+        <div class="text-danger" *ngIf="contractForm.get('id').hasError('required') &&
+            contractForm.get('id').dirty">
+          Please input !!
+        </div>
+      </div>
+
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="deposit">
+        <span>Deposit</span>
+      </div>
+      <div class="text-danger" *ngIf="contractForm.get('deposit').hasError('required') &&
+            contractForm.get('deposit').dirty">
+        Please input !!
+      </div>
+      <div class="text-danger" *ngIf="contractForm.get('deposit').hasError('min') &&
+            contractForm.get('deposit').dirty">
+        Not negative !!
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="totalMoney">
+        <span>Total Money</span>
+      </div>
+      <div class="text-danger" *ngIf="contractForm.get('totalMoney').hasError('required') &&
+            contractForm.get('totalMoney').dirty">
+        Please input !!
+      </div>
+      <div class="text-danger" *ngIf="contractForm.get('totalMoney').hasError('min') &&
+            contractForm.get('totalMoney').dirty">
+        Not negative !!
+      </div>
+      <span>Date start</span>
+      <div class="inputbox">
+        <input type="date" required="required" formControlName="dateStart" >
+      </div>
+      <div class="text-danger" *ngIf="contractForm.get('dateStart').hasError('required') &&
+            contractForm.get('dateStart').dirty">
+        Please input !!
+      </div>
+      <span>Date end</span>
+      <div class="inputbox">
+        <input type="date" required="required" formControlName="dateEnd">
+      </div>
+      <div class="text-danger" *ngIf="contractForm.get('dateEnd').hasError('required') &&
+            contractForm.get('dateEnd').dirty">
+        Please input !!
+      </div>
+      <div class="inputbox">
+        <input [hidden]="contractForm.invalid"  type="button" value="submit">
+      </div>
+
+    </form>
+  </div>
+</div>

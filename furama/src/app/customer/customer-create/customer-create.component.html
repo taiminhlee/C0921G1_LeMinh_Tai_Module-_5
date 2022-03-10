@@ -1,0 +1,93 @@
+<div class="body">
+  <div class="center">
+    <h1>Our Newsletter</h1>
+    <form [formGroup]="customerCreateForm" (ngSubmit)="onSubmit()">
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="id">
+        <span>Id</span>
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('id').hasError('required') &&
+            customerCreateForm.get('id').dirty">
+        Please input !!
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('id').hasError('pattern') &&
+            customerCreateForm.get('id').dirty">
+        Wrong format !!
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="name">
+        <span>Name</span>
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('name').hasError('required') &&
+            customerCreateForm.get('name').dirty">
+        Please input !!
+      </div>
+      <span>Birthday</span>
+      <div class="inputbox">
+        <input type="date" required="required" formControlName="birthday">
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('birthday').hasError('required') &&
+            customerCreateForm.get('birthday').dirty">
+        Please input !!
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="phone">
+        <span>Phone</span>
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('phone').hasError('required') &&
+            customerCreateForm.get('phone').dirty">
+        Please input !!
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('phone').hasError('pattern') &&
+            customerCreateForm.get('phone').dirty">
+        Wrong format !!
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="email">
+        <span>Email</span>
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('email').hasError('required') &&
+            customerCreateForm.get('email').dirty">
+        Please input !!
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('email').hasError('email') &&
+            customerCreateForm.get('email').dirty">
+        Wrong format !!
+      </div>
+      <div class="gender">
+        <span>Gender: </span>  <input type="radio" value="1" required="required" formControlName="gender">Male
+        <input type="radio" value="0" required="required" formControlName="gender">Female
+      </div>
+
+      <div class="text-danger" *ngIf="customerCreateForm.get('gender').hasError('required') &&
+            customerCreateForm.get('gender').dirty">
+        Please input !!
+      </div>
+      <span>Customer Type</span>
+      <div class="inputbox">
+        <select formControlName="customerType">
+          <option selected disabled>Choose please</option>
+          <option value="{{customerType.id}}" *ngFor="let customerType of customerTypeList">{{customerType.name}}</option>
+        </select>
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('customerType').hasError('required') &&
+            customerCreateForm.get('customerType').dirty">
+        Please input !!
+      </div>
+      <div class="inputbox">
+        <input type="text" required="required" formControlName="address">
+        <span>Address</span>
+      </div>
+      <div class="text-danger" *ngIf="customerCreateForm.get('address').hasError('required') &&
+            customerCreateForm.get('address').dirty">
+        Please input !!
+      </div>
+      <div class="inputbox">
+        <input [hidden]="customerCreateForm.invalid" type="button" value="submit">
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
