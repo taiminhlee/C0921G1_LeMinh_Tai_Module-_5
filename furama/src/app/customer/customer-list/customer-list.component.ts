@@ -13,9 +13,8 @@ import {timeout} from 'rxjs/operators';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-  public customerList: Customer[] | undefined;
-  public customerTypeList: CustomerType[] | undefined;
-  public id: string;
+  public customerList: Customer[];
+  public customerTypeList: CustomerType[];
 
 
   constructor(private customerService: CustomerService, private customerTypeService: CustomerTypeService,
@@ -23,10 +22,17 @@ export class CustomerListComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
-    this.customerList = this.customerService.getALl();
+  ngOnInit() {
+    this.getAllCustomerType();
+    this.customerService.getALl().subscribe(customers => {
+      this.customerList = customers;
+    });
+  }
 
-    this.customerTypeList = this.customerTypeService.getAll();
+  getAllCustomerType() {
+    this.customerTypeService.getAll().subscribe(customerTypes => {
+      this.customerTypeList = customerTypes;
+    });
   }
 
   openDialog(id: string): void {
@@ -37,7 +43,7 @@ export class CustomerListComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      
+
   })
 }
 }

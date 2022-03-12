@@ -1,0 +1,171 @@
+{
+  "customer": [
+    {
+      "id": "KH-0002",
+      "name": "Nguyễn Văn Nghia",
+      "birthday": "1992-10-18",
+      "gender": "1",
+      "idCard": "09028907911",
+      "phone": "0910987689",
+      "email": "Nghia23@gmail.com",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "address": "Quang Tri"
+    },
+    {
+      "id": "KH-9091",
+      "name": "dung",
+      "email": "Linhgo1509@gmail.com",
+      "phone": "0910001119",
+      "idCard": "12312456",
+      "address": "23 Smith Road",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "gender": "1",
+      "birthday": "2022-03-09"
+    },
+    {
+      "id": "KH-0005",
+      "name": "tung",
+      "birthday": "2022-03-15",
+      "gender": "1",
+      "idCard": "81283",
+      "phone": "0910002292",
+      "email": "Linhgo1509@gmail.com",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "address": "23 Smith Road"
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Member"
+    }
+  ],
+  "contract": [
+    {
+    "id": 1,
+    "customer": {
+      "id": "KH-0022",
+      "name": "Nguyễn Văn A",
+      "birthday": "2020-02-02",
+      "gender": 1,
+      "idCard": "0238472342",
+      "phone": "090234241",
+      "email": "a@gmail.com",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "address": "Đà Nẵng"
+    },
+    "facility": {
+      "id": "DV-0001",
+      "name": "abc",
+      "area": 1200,
+      "cost": 2000,
+      "maxOfPeople": 3,
+      "rentType": {
+        "id": 1,
+        "name": "year"
+      },
+      "img": ""
+    },
+    "dateStart": "04/08/2022",
+    "dateEnd": "07/08/2022",
+    "deposit": 200,
+    "totalMoney": 1000
+  },
+    {
+      "id": 2,
+      "customer": {
+        "id": "KH-1444",
+        "name": "Nguyễn Văn B",
+        "birthday": "2000-02-02",
+        "gender": 1,
+        "idCard": "0238472342",
+        "phone": "090234241",
+        "email": "b@gmail.com",
+        "customerType": {
+          "id": 2,
+          "name": "Platinum"
+        },
+        "address": "Đà Nẵng"
+      },
+      "facility": {
+        "id": "DV-0003",
+        "name": "kmn",
+        "area": 1000,
+        "cost": 3000,
+        "maxOfPeople": 3,
+        "rentType": {
+          "id": 1,
+          "name": "year"
+        },
+        "img": ""
+      },
+      "dateStart": "04/08/2022",
+      "dateEnd": "07/08/2022",
+      "deposit": 200,
+      "totalMoney": 1000
+    }
+  ],
+  "facility": [
+    {
+      "id": "DV-0001",
+      "name": "abc",
+      "area": 1200,
+      "cost": 2000,
+      "maxOfPeople": 3,
+      "rentType": {
+        "id": 1,
+        "name": "year"
+      },
+      "img": ""
+    },
+    {
+      "id": "DV-0003",
+      "name": "xyz",
+      "area": 1200,
+      "cost": 2000,
+      "maxOfPeople": 3,
+      "rentType": {
+        "id": 3,
+        "name": "day"
+      },
+      "img": ""
+    },
+    {
+      "id": "DV-0002",
+      "name": "kmn",
+      "area": 1200,
+      "cost": 2000,
+      "maxOfPeople": 4,
+      "rentType": {
+        "id": 2,
+        "name": "month"
+      },
+      "img": ""
+    }
+  ]
+
+}

@@ -1,5 +1,5 @@
 {
-  "productList": [
+  "product": [
     {
       "id": 1,
       "name": "IPhone 12",
@@ -46,5 +46,7 @@
       "id": 1,
       "name": "IPhone"
     }
-  ]
+  ],
+  "todoList": []
+
 }

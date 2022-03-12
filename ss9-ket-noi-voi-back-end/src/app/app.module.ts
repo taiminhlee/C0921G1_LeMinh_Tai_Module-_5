@@ -15,16 +15,28 @@ import {CategoryRoutingModule} from './angular-product-management/category-routi
 import {AppRoutingModule} from './app-routing.module';
 import {CategoryDeleteComponent} from './angular-product-management/catogory/category-delete/category-delete.component';
 import {SharedModule} from './angular-product-management/shared/shared.module';
+import { CreateComponent } from './angular-todo-app/create/create.component';
+import { DeleteComponent } from './angular-todo-app/delete/delete.component';
+import { TodoComponent } from './angular-todo-app/todo/todo.component';
+import { UpdateComponent } from './angular-todo-app/update/update.component';
+import {TodoAppRoutingModule} from './angular-todo-app/todo-app-routing.module';
+import {CategoryListComponent} from './angular-product-management/catogory/category-list/category-list.component';
+import {ProductModule} from './angular-product-management/product/product.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CreateComponent,
+    DeleteComponent,
+    TodoComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    TodoAppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

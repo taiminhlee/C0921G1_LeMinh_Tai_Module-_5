@@ -23,6 +23,7 @@ import {RouterModule} from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerDeleteComponent } from './customer/customer-delete/customer-delete.component';
 import { MatDialogModule} from '@angular/material/dialog';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { MatDialogModule} from '@angular/material/dialog';
     FormsModule,
     RouterModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

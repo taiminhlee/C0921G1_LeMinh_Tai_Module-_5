@@ -27,12 +27,12 @@ export class CustomerCreateComponent implements OnInit {
 
   constructor(private customerTypeService: CustomerTypeService) { }
 
-  ngOnInit(): void {
-    this.customerTypeList=this.customerTypeService.getAll();
-  }
 
   onSubmit(){
     console.log(this.customerCreateForm);
+  }
+
+  ngOnInit(): void {
   }
 
 }

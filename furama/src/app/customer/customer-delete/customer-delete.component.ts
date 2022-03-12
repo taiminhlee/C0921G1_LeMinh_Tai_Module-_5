@@ -16,7 +16,7 @@ export class CustomerDeleteComponent implements OnInit {
               ) { }
 
   ngOnInit(): void {
-    this.customer = this.customerService.findById(this.data);
+    // this.customer = this.customerService.findById(this.data);
   }
 
   delete(id: string){
